@@ -1,0 +1,33 @@
+server:
+  context-path: /springboot
+  jsp-servlet:
+    init-parameters:
+      development: true
+#mybatis相关配置  数据源对象
+spring:
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ems
+    type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+#配置post请求中文乱码
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 20MB
+  profiles:
+    active: pro
+mybatis:
+  mapper-locations: com/baizhi/mapper/*Mapper.xml
+  type-aliases-package: com.baizhi.entity
+
+
+
