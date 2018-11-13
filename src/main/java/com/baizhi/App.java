@@ -16,6 +16,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 public class App extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
+        System.out.println("this is wzl");
         SpringApplication.run(App.class,args);
     }
     @Bean
